@@ -4,7 +4,7 @@ import { Component } from "@angular/core";
     selector:'shp-product-list',
     templateUrl:'./product-list.component.html'
 })
-export class ProductList
+export class ProductListComponent
 {
     pageTitle:string ='Product List';
 }
