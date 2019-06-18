@@ -1,5 +1,7 @@
 import { Component } from "@angular/core";
 
+import{IProduct} from "./IProduct"
+
 @Component({
     selector:'shp-product-list',
     templateUrl:'./product-list.component.html'
@@ -16,7 +18,7 @@ export class ProductListComponent
             this.showImage=!this.showImage;
     }
 
-    products :any[]=[
+    products :IProduct[]=[
         {
             "productId" : 1,
             "productType" : "Dvd",
