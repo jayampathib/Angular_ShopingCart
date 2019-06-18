@@ -2,7 +2,7 @@
     <div class='card-header'>
         {{pageTitle}}
     </div>
-    <div class='card-body'>
+    <div class='card-body' *ngIf='products && products.length'>
         <div class='row'>
             <div class='col-md-2'>Filter by:</div>
             <div class='col-md-4'>
@@ -17,21 +17,31 @@
         <div class='table-responsive'>
             <table class='table'>
             <thead>
-                <tr>
+                <tr>  
+                <th>productType</th>
+                <th>category</th>
+                <th>name</th>
+                <th>releaseDate</th>
+                <th>price</th>
+                <th>5 Star Rating</th>             
                 <th>
                     <button class='btn btn-primary'>
                     Show Image
                     </button>
                 </th>
-                <th>Product</th>
-                <th>Code</th>
-                <th>Available</th>
-                <th>Price</th>
-                <th>5 Star Rating</th>
                 </tr>
             </thead>
             <tbody>
-
+                <tr *ngFor='let product of products'>
+                    <!-- <td> {{product.productId 		}}</td> -->
+                    <td> {{product.productType     }}</td>
+                    <td> {{product.category        }}</td>
+                    <td> {{product.name            }}</td>
+                    <td> {{product.releaseDate     }}</td>
+                    <td> {{product.price           }}</td>
+                    <td> {{product.starRating      }}</td>
+                    <td> {{product.coverImageUrl   }}</td>
+                </tr>
             </tbody>
             </table>
         </div>
