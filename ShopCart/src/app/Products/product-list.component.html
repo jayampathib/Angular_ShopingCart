@@ -25,8 +25,9 @@
                 <th>price</th>
                 <th>5 Star Rating</th>             
                 <th>
-                    <button class='btn btn-primary'>
-                    Show Image
+                    <button class='btn btn-primary'
+                    (click)='toggleImage()' >
+                    {{ showImage ?  'Hide':'Show'}} Image
                     </button>
                 </th>
                 </tr>
@@ -40,7 +41,7 @@
                     <td> {{product.releaseDate     }}</td>
                     <td> {{product.price           }}</td>
                     <td> {{product.starRating      }}</td>
-                    <td><img [style.width.px]='imageWidth' [style.margin.px]='margin' src='{{product.coverImageUrl}}'></td>
+                    <td><img *ngIf='showImage' [style.width.px]='imageWidth' [style.margin.px]='margin' src='{{product.coverImageUrl}}'></td>
                 </tr>
             </tbody>
             </table>
