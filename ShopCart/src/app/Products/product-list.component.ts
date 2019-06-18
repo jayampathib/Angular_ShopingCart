@@ -16,7 +16,7 @@ export class ProductListComponent
             "releaseDate" :"2000-01-31" ,
             "price":3.25,
             "starRating":8.2,
-            "coverImageUrl":""
+            "coverImageUrl":"assets\/Img\/titanic.jpg"
         },
         {
             "productId" : 2,
@@ -26,7 +26,7 @@ export class ProductListComponent
             "releaseDate" :"1988-08-31" ,
             "price":1.25,
             "starRating":6.4,
-            "coverImageUrl":""
+            "coverImageUrl":"assets\/Img\/Rambo.jpg"
         }
     ];
 }
