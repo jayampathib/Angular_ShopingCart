@@ -9,12 +9,13 @@ export class ProductListComponent
     pageTitle:string ='Product List';
     imageWidth :number =50;
     margin:number =2;
+    listFilter:string = 'movie'
 
     showImage:boolean =false;
     toggleImage() :void{
             this.showImage=!this.showImage;
     }
-    
+
     products :any[]=[
         {
             "productId" : 1,
