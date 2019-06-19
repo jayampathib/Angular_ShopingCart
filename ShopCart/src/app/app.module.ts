@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { ProductListComponent} from './Products/product-list.component';
+import { StarComponent } from './Shared/star.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductListComponent
+    ProductListComponent,
+    StarComponent
   ],
   imports: [
     BrowserModule,

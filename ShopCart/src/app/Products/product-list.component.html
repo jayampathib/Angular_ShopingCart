@@ -40,7 +40,7 @@
                     <td> {{product.name            }}</td>
                     <td> {{product.releaseDate     }}</td>
                     <td> {{product.price           }}</td>
-                    <td> {{product.starRating      }}</td>
+                    <td> <shp-star></shp-star></td>
                     <td><img *ngIf='showImage' [style.width.px]='imageWidth' [style.margin.px]='margin' src='{{product.coverImageUrl}}'></td>
                 </tr>
             </tbody>

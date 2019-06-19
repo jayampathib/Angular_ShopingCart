@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 
-import{IProduct} from "./IProduct"
+import{IProduct} from "./IProduct";
+import{StarComponent} from "../Shared/star.component";
 
 @Component({
     selector:'shp-product-list',
