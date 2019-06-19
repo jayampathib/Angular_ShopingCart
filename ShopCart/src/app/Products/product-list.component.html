@@ -40,7 +40,8 @@
                     <td> {{product.name            }}</td>
                     <td> {{product.releaseDate     }}</td>
                     <td> {{product.price           }}</td>
-                    <td> <shp-star [rating]='product.starRating'></shp-star></td>
+                    <td> <shp-star [rating]='product.starRating'
+                        (ratingClicked)='onRatingClicked($event)'></shp-star></td>
                     <td><img *ngIf='showImage' [style.width.px]='imageWidth' [style.margin.px]='margin' src='{{product.coverImageUrl}}'></td>
                 </tr>
             </tbody>
