@@ -1,4 +1,5 @@
-import { Component, OnChanges,Input } from "@angular/core";
+import { Component, OnChanges, Input, EventEmitter, Output } from "@angular/core";
+ 
 
 @Component({
     selector:'<shp-star>',
@@ -14,7 +15,10 @@ export class StarComponent implements OnChanges
         this.starWidth = this.rating * 75 / 5;
       }
 
+    @Output() ratingClicked : EventEmitter<string>=new EventEmitter<string>();
+
     onClick() :void{
-        alert('Hi');
+        alert('The Rating ${this.rating}');
+        this.ratingClicked.emit(`The Rating ${this.rating}`);
     }
 }
