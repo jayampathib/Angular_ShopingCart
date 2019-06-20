@@ -10,19 +10,28 @@ import { ProductService } from "./product.service";
 })
 export class ProductListComponent  implements OnInit
 {
+    errorMessage :string;
+    
     ngOnInit(): void {
-      // this.products = 
-      var prod =this.productService.getProducts();
-    }
+        // this.products = 
+        this.productService.getProducts().subscribe(
+            products =>{
+                this.products =products;
+                this.filteredProducts =this.products;
+            },
+            error=> this.errorMessage = <any>error // <any> use to cast value
+        );
+      }
 
     constructor(private productService : ProductService) {
     }
     products :IProduct[] ;
+    filteredProducts :IProduct[] ;
 
     pageTitle:string ='Product List';
     imageWidth :number =50;
     margin:number =2;
-    listFilter:string = 'movie'
+    listFilter:string = 'movie';
 
     showImage:boolean =false;
     toggleImage() :void{
