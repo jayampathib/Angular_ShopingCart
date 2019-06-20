@@ -2,13 +2,19 @@ import { Component } from "@angular/core";
 
 import{IProduct} from "./IProduct";
 import{StarComponent} from "../Shared/star.component";
+import { ProductService } from "./product.service";
 
 @Component({
     selector:'shp-product-list',
     templateUrl:'./product-list.component.html'
 })
-export class ProductListComponent
+export class ProductListComponent  
 {
+
+    constructor(private productService : ProductService) {         
+    }
+    products :IProduct[] ;
+
     pageTitle:string ='Product List';
     imageWidth :number =50;
     margin:number =2;
@@ -19,29 +25,9 @@ export class ProductListComponent
             this.showImage=!this.showImage;
     }
     onRatingClicked(message:string): void{
-this.pageTitle = 'Product List :'+message;
+        this.pageTitle = 'Product List :'+message;
     }
 
-    products :IProduct[]=[
-        {
-            "productId" : 1,
-            "productType" : "Dvd",
-            "category" : "Movie" ,
-            "name" :"Titanic" ,
-            "releaseDate" :"2000-01-31" ,
-            "price":3.25,
-            "starRating":3.2,
-            "coverImageUrl":"assets\/Img\/titanic.jpg"
-        },
-        {
-            "productId" : 2,
-            "productType" : "Dvd",
-            "category" : "Movie" ,
-            "name" :"Rambo" ,
-            "releaseDate" :"1988-08-31" ,
-            "price":1.25,
-            "starRating":1.5,
-            "coverImageUrl":"assets\/Img\/Rambo.jpg"
-        }
-    ];
+    
+    
 }
