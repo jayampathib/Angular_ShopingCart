@@ -9,6 +9,13 @@ import { Observable } from 'rxjs';
 export class ProductDetailGuard implements CanActivate {
   
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) : Observable<boolean> | Promise<boolean> | boolean {
+    
+    let id = +route.url[1].path;
+    if (isNaN(id) || id < 1) {
+      alert('Invalid product Id');
+      
+      return false;
+    }
     return true;
   }
 
