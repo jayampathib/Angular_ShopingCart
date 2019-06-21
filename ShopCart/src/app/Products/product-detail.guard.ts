@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, RouterStateSnapshot, CanActivate, Route } from '@angular/router';
+import { ActivatedRouteSnapshot, RouterStateSnapshot, CanActivate, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 //import { Promise } from 'q';
 
@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class ProductDetailGuard implements CanActivate {
  
-  constructor(router : Route) {
+  constructor(private router : Router) {
     
   }
   
