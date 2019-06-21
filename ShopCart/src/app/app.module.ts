@@ -6,12 +6,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { ProductListComponent} from './Products/product-list.component';
 import { StarComponent } from './Shared/star.component';
+import { ProductDetailComponent } from './Products/product-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductListComponent,
-    StarComponent
+    StarComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
