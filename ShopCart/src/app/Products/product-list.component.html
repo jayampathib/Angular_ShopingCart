@@ -37,7 +37,7 @@
                     <!-- <td> {{product.productId 		}}</td> -->
                     <td> {{product.productType     }}</td>
                     <td> {{product.category        }}</td>
-                    <td> {{product.name            }}</td>
+                    <td><a class='nav-link' [routerLink]="['/products', product.productId]">{{product.name  }}</a> </td>
                     <td> {{product.releaseDate     }}</td>
                     <td> {{product.price           }}</td>
                     <td> <shp-star [rating]='product.starRating'
