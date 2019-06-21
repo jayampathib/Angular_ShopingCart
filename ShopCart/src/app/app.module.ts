@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { ProductListComponent} from './Products/product-list.component';
 import { StarComponent } from './Shared/star.component';
 import { ProductDetailComponent } from './Products/product-detail.component';
+import { WelcomeComponent } from './home/welcome.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductListComponent,
     StarComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
